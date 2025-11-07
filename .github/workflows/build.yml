@@ -21,8 +21,8 @@ jobs:
       - name: Run Build and Deploy Script
         run: python build.py
 
-      - name: Set current date as env variable
-        run: echo "NOW=$(date +'%Y-%m-%d_%H-%M-%S')" >> $GITHUB_ENV
+      # - name: Set current date as env variable
+      #   run: echo "NOW=$(date +'%Y-%m-%d_%H-%M-%S')" >> $GITHUB_ENV
 
       # Note: need to keep *.json files for compatability with older installers
       # Can be removed once it is unlikely people are using the old installer
@@ -30,7 +30,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/') # only publish tagged commits
         with:
-          tag_name: ${{ env.NOW }}
+          # tag_name: ${{ env.NOW }}
           files: |
             *.json
             *.zip
