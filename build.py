@@ -112,7 +112,7 @@ download("https://github.com/07th-mod/python-patcher/raw/refs/heads/master/insta
 download("https://github.com/07th-mod/python-patcher/raw/refs/heads/master/cachedDownloadSizes.json")
 
 ## Zip the json files into an archive
-sevenZip.sevenZipMakeArchive('*.json', "installerMetaData.zip")
+sevenZip.sevenZipMakeArchive('*.json', "installerMetadata.zip")
 
 # Cleanup after script finished - may want to disable this when debugging
 clearOldFiles(clearOutput = False)
