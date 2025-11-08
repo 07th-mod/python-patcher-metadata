@@ -34,7 +34,7 @@ jobs:
           files: |
             *.json
             *.zip
-          draft: true
+          draft: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
