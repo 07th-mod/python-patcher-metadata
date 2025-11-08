@@ -2,6 +2,7 @@ name: Build updates.json file
 
 # Run this workflow on every push or pull request
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
